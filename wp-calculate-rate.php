@@ -19,5 +19,9 @@ function nkdCalculate_shortcode($atts) {
 }
 add_shortcode('nkd-calculate', 'nkdCalculate_shortcode');
 
+function nkdCalculate_rate_shortcode($atts) {
+   return wget_option('my_rate');
+}
+add_shortcode('nkd-rate', 'nkdCalculate_rate_shortcode');
 
 ?>
