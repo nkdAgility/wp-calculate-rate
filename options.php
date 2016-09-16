@@ -1,22 +1,16 @@
 <?php
 // create custom plugin settings menu
 add_action('admin_menu', 'my_cool_plugin_create_menu');
-
 function my_cool_plugin_create_menu() {
-
 	//create new top-level menu
 	add_menu_page('nkdCalculations Settings', 'nkdCalculations Settings', 'administrator', __FILE__, 'my_cool_plugin_settings_page' , plugins_url('/images/icon.png', __FILE__) );
-
 	//call register settings function
 	add_action( 'admin_init', 'register_nkdCalculations_plugin_settings' );
 }
-
-
 function register_nkdCalculations_plugin_settings() {
 	//register our settings
 	register_setting( 'nkdCalculations-plugin-settings-group', 'my_rate' );
 }
-
 function my_cool_plugin_settings_page() {
 ?>
 <div class="wrap">
