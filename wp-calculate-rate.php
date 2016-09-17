@@ -18,13 +18,15 @@ function nkdCalculate_shortcodes_init() {
     add_shortcode('nkd-calculate', 'nkdCalculate_shortcode');
 
     function nkdCalculate_rate_shortcode($atts) {
-    return wget_option('my_rate');
+    return wget_option('nkd_rate');
     }
 
     add_shortcode('nkd-rate', 'nkdCalculate_rate_shortcode');
 
+    
 }
 
 add_action('init', 'nkdCalculate_shortcodes_init');
+require_once(dirname(__FILE__) . '/options.php');
 
 ?>
