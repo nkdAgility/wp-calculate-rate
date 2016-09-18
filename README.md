@@ -16,3 +16,7 @@ Rate for public per user
 rate for Private with 10 students
 
 [nkd-calculate evaluate="(([nkd-rate]*2)*[types field="days"][/types])+([types field="bulkset"]*10)"]
+
+#Notes
+
+Uses: http://ship.getherbert.com
